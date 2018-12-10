@@ -1,0 +1,15 @@
+D:\AR+watch_server\AR+watch_server\bin\Debug\AR+watch_server.exe.config
+D:\AR+watch_server\AR+watch_server\bin\Debug\AR+watch_server.exe
+D:\AR+watch_server\AR+watch_server\bin\Debug\AR+watch_server.pdb
+D:\AR+watch_server\AR+watch_server\obj\Debug\AR+watch_server.csprojAssemblyReference.cache
+D:\AR+watch_server\AR+watch_server\obj\Debug\MainWindow.g.cs
+D:\AR+watch_server\AR+watch_server\obj\Debug\App.g.cs
+D:\AR+watch_server\AR+watch_server\obj\Debug\AR+watch_server_MarkupCompile.cache
+D:\AR+watch_server\AR+watch_server\obj\Debug\AR+watch_server_MarkupCompile.lref
+D:\AR+watch_server\AR+watch_server\obj\Debug\MainWindow.baml
+D:\AR+watch_server\AR+watch_server\obj\Debug\AR+watch_server.g.resources
+D:\AR+watch_server\AR+watch_server\obj\Debug\AR_watch_server.Properties.Resources.resources
+D:\AR+watch_server\AR+watch_server\obj\Debug\AR+watch_server.csproj.GenerateResource.cache
+D:\AR+watch_server\AR+watch_server\obj\Debug\AR+watch_server.csproj.CoreCompileInputs.cache
+D:\AR+watch_server\AR+watch_server\obj\Debug\AR+watch_server.exe
+D:\AR+watch_server\AR+watch_server\obj\Debug\AR+watch_server.pdb
