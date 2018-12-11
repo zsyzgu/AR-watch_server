@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AR_watch_server"
         mc:Ignorable="d"
-        Title="MainWindow" Height="353.333" Width="525" ResizeMode="NoResize">
-    <Grid>
+        Title="MainWindow" Height="350" Width="525" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,0">
         <TextBlock Margin="21,24,434,271" Text="Server IP:" Height="24"/>
         <ComboBox Margin="88,18,290,271" Name="uComboIP"></ComboBox>
         <Button Margin="232,18,229,271" Content="Listen" Click="uButtonListen_Click"></Button>
@@ -16,8 +16,9 @@
         <Button Margin="293,58,168,231" Content="Log/On" Click="uButtonLogOn_Click" />
         <Button Margin="354,58,107,231" Content="Log/Off" Click="uButtonLogOff_Click" />
         <Button Margin="232,58,229,231" Content="Send" Click="uButtonSend_Click" />
-        <ScrollViewer Margin="10,98,10,10" Name="uScrollConsole">
+        <ScrollViewer Margin="10,98,10,50" Name="uScrollConsole">
             <TextBox Name="uTextConsole" TextChanged="uTextConsole_TextChanged" TextWrapping="Wrap"></TextBox>
         </ScrollViewer>
+        <TextBox Margin="10,276,10,10" Name="uTextData"></TextBox>
     </Grid>
 </Window>
