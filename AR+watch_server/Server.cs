@@ -6,9 +6,9 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 
-
 namespace AR_watch_server
 {
+
     public class Server : INotifyPropertyChanged
     {
         const int PORT = 8398;
@@ -26,6 +26,9 @@ namespace AR_watch_server
         public string netInfo { get { return netInfo0; } set { netInfo0 = value; OnPropertyChanged("netInfo"); } }
         public string console { get { return console0; } set { console0 = value; OnPropertyChanged("console"); } }
         public string data { get { return data0; } set { data0 = value; OnPropertyChanged("data"); } }
+
+        public delegate void InformHandle(object sender, string info);
+        public event InformHandle Recv;
 
         public Server(MainWindow father)
         {
@@ -110,9 +113,10 @@ namespace AR_watch_server
                 StreamReader reader = new StreamReader(client.GetStream());
                 while (listening)
                 {
-                    string str = reader.ReadLine();
-                    if (str == null) break;
-                    data = str;
+                    string info = reader.ReadLine();
+                    if (info == null) break;
+                    data = info;
+                    Recv(this, info);
                 }
                 reader.Close();
             }

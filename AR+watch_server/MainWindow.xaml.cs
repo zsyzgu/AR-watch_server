@@ -22,16 +22,28 @@ namespace AR_watch_server
 {
     public partial class MainWindow : Window
     {
-        Server server;
+        public Server server;
+        public Chart chart;
 
         public MainWindow()
         {
             InitializeComponent();
             server = new Server(this);
+            server.Recv += new Server.InformHandle(recvData);
             uComboIP.ItemsSource = server.ips;
             uTextNetInfo.SetBinding(TextBlock.TextProperty, new Binding("netInfo") { Source = server });
             uTextConsole.SetBinding(TextBox.TextProperty, new Binding("console") { Source = server });
             uTextData.SetBinding(TextBox.TextProperty, new Binding("data") { Source = server });
+            chart = new Chart(this, uCanvas);
+        }
+
+        private void recvData(object sender, string info)
+        {
+            string[] tags = info.Split(',');
+            if (tags.Length == 5 && tags[0] == "Acc")
+            {
+                chart.add(Convert.ToSingle(tags[1]), Convert.ToSingle(tags[2]), Convert.ToSingle(tags[3]), Convert.ToSingle(tags[4]));
+            }
         }
 
         private void uButtonListen_Click(object sender, RoutedEventArgs e)
